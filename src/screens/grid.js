@@ -22,7 +22,7 @@ export default class Grid extends Component {
 
   renderImage(item:Animal) {
     return (
-      <View style={{  justifyContent: 'center', alignItems: 'center'}}>
+      <View style={{ justifyContent: 'center', alignItems: 'center'}}>
         <TouchableOpacity onPress={() => {this.props.onSelect(item)}}>
           <Image
             source={item.image}

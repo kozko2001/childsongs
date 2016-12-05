@@ -17,7 +17,7 @@ const initialState = {
     {
       name: 'tortuga',
       image: require('../../images/tortuga.jpg'),
-      sound: '',
+      sound: 'tortuga.mp3',
     },
     {
       name: 'lleo',
@@ -27,12 +27,12 @@ const initialState = {
     {
       name: 'marieta',
       image: require('../../images/marieta.jpg'),
-      sound: '',
+      sound: 'marieta.mp3',
     },
     {
       name: 'cargol',
       image: require('../../images/cargol.jpg'),
-      sound: '',
+      sound: 'cargol.mp3',
     },
   ]
 };
