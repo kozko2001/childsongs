@@ -41,6 +41,7 @@ export default class Grid extends Component {
         data={this.props.animals}
         itemsPerRow={2}
         renderItem={(item) => this.renderImage(item)}
+        style={{backgroundColor: '#FFFFFF'}}
       />
     );
   }

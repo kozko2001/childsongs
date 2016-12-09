@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Platform } from 'react-native';
+import { StyleSheet, Text, View, Platform, StatusBar} from 'react-native';
 import { connect } from 'react-redux';
 import actions from './actions'
 import Grid from './screens/grid'
@@ -9,18 +9,20 @@ import type { Animal } from '../reducers/navigation';
 
 class App extends Component {
 
-  componentWillUpdate(nextProps) {
-    if (nextProps.selected) {
-      play(nextProps.selected.sound);
-    }
+  selectAnimal(animal) {
+    play(animal.sound);
+    this.props.selectAnimal(animal);
   }
 
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar
+          backgroundColor='#6b8551'
+        />
         <Grid
           animals={this.props.animals}
-          onSelect={this.props.selectAnimal}
+          onSelect={(animal) => this.selectAnimal(animal)}
         />
       </View>
     );
